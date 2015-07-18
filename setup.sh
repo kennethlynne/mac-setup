@@ -66,14 +66,27 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
+# Turn off keyboard illumination when computer is not used for 5 minutes
+defaults write com.apple.BezelServices kDimTime -int 300
+
+# Disable autocorrect 
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable warning when changing file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
 brews=(
+  android-sdk
   brew-cask
   git
   git-extras
+  heroku-toolbelt
   nvm
+  mysql
+  mongodb
   python
   python3
   ruby
@@ -91,24 +104,26 @@ casks=(
   flash
   github
   iterm2
+  java
+  jeromelebel-mongohub
   qlprettypatch
   betterzipql
   qlimagesize
   webpquicklook
   suspicious-package
+  sublime-text3
   qlcolorcode
   qlmarkdown
   qlstephen
   quicklook-json
   quicklook-csv
-  sublime-text
-  jeromelebel-mongohub
   robomongo
-  java
   skype
   slack
   spotify
   vlc
+  java
+  jeromelebel-mongohub
 )
 
 npms=(
@@ -166,6 +181,11 @@ brew cask alfred link
 brew cleanup
 brew cask cleanup
 brew linkapps
+
+for fail in ${fails[@]}
+do
+  echo "Failed to install: $fail"
+done
 
 # Allow installing user scripts via GitHub Gist or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
