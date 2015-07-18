@@ -175,6 +175,10 @@ function install {
 install 'brew install' ${brews[@]}
 install 'brew cask install --appdir="/Applications"' ${casks[@]}
 
+nvm install stable
+nvm use stable
+nvm alias default stable
+
 npm update npm -g
 
 install 'npm install -g' ${npms[@]}
