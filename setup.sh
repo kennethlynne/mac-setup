@@ -135,6 +135,11 @@ brew tap homebrew/dupes
 
 fails=()
 
+function print_red {
+  red='\x1B[0;31m'
+  NC='\x1B[0m' # no color
+  echo -e "${red}$1${NC}"
+}
 
 function install {
   cmd=$1
