@@ -85,7 +85,6 @@ brews=(
   brew-cask
   git
   gcc
-  Caskroom/cask/xquartz
   r
   git-extras
   heroku-toolbelt
@@ -113,6 +112,7 @@ casks=(
   jeromelebel-mongohub
   qlprettypatch
   betterzipql
+  Caskroom/cask/xquartz
   qlimagesize
   webpquicklook
   suspicious-package
@@ -123,6 +123,7 @@ casks=(
   quicklook-json
   quicklook-csv
   robomongo
+  caskroom/homebrew-cask/mongochef
   skype
   slack
   spotify
