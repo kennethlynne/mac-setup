@@ -78,10 +78,15 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+brew tap homebrew/science
+
 brews=(
   android-sdk
   brew-cask
   git
+  gcc
+  Caskroom/cask/xquartz
+  r
   git-extras
   heroku-toolbelt
   nvm
