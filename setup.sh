@@ -211,4 +211,6 @@ done
 # Allow installing user scripts via GitHub Gist or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 
-pip install numpy scikit-learn
+pip install numpy scikit-learn virtualenv virtualenvwrapper
+
+echo source "/usr/local/bin/virtualenvwrapper.sh" >> ~/.bash_profile
