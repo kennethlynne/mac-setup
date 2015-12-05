@@ -83,16 +83,24 @@ brew tap homebrew/science
 brews=(
   android-sdk
   brew-cask
+  cmake
   git
   gcc
+  jpeg
+  libpng
+  libtiff
   r
   git-extras
+  eigen
+  tbb
   heroku-toolbelt
   nvm
   mysql
   mongodb
+  openexr
   python
   python3
+  pkg-config
   ruby
   wget
   zsh
@@ -203,3 +211,4 @@ done
 # Allow installing user scripts via GitHub Gist or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 
+pip install numpy scikit-learn
