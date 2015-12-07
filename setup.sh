@@ -84,6 +84,8 @@ brews=(
   android-sdk
   brew-cask
   cmake
+  docker
+  boot2docker
   git
   gcc
   jpeg
@@ -130,6 +132,7 @@ casks=(
   qlstephen
   quicklook-json
   quicklook-csv
+  virtualbox
   robomongo
   caskroom/homebrew-cask/mongochef
   skype
